@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "regions": ["sin1"],
+    "builds": [
+        { "src": "api/**/*.go", "use": "@now/go" }
+    ],
+    "routes": [
+        { "src": "/v1/financial-holiday", "dest": "/api/financial_holiday.go" , "methods": ["GET"] }
+    ],
+    "env": {
+        "ANOTHER_SECRET": "my-other-secret-key"
+    }
+}
